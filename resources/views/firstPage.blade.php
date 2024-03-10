@@ -23,22 +23,27 @@
         font-size: larger;
         font-weight: bolder;
     }
-   
+    #hello{
+        margin-left:100px;
+    }
+   #button2{
+    position:absolute;
+    margin-left:100px;
+   }
    </style>
 </head>
 <body>
     @section('form');
-    <div id="newform">
-        <h1><b>Hello Thanks for your visit </b></h1>
+
+        <h1 id="hello"><b>Hello Thanks for your visit </b></h1>
         <br>
-        <div id="options">
+        
             <form action="{{route('take')}}">
             @csrf
             <button class="add" id="button1" type="submit" value="add" name="button">add your information</button>
             <button class="add" id="button2" type="submit" value="data" name="button">All your data</button>
             </form>
-        </div>
-    </div>
+ 
     @endsection
 </body>
 </html>

@@ -71,7 +71,7 @@
             border-color: pink;
             padding:20px;
             border-style:groove;
-            padding-left: 300px;    
+            padding-left: 100px;    
             border-radius:20px;    
             grid-row-start:2;
             grid-row-end: 3;

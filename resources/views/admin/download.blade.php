@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-          #downloadButton{
+          .downloadButton{
+            position:absolute;
             background-color: darkgreen;
             color:white;
             height:40px;
@@ -14,7 +15,8 @@
             margin-left:50px;
             
         }
-        #downloadButton:hover{
+        .downloadButton:hover{
+            position:absolute;
             background-color: lightgreen;
             height:50px;
             width:110px;
@@ -35,6 +37,10 @@
             margin-top:100px;
             
         }
+        #buttonnew{
+            position:absolute;
+            top:430px;
+        }
     </style>
    
 </head>
@@ -49,17 +55,18 @@
            
             <input id="pincode" name="pincode" type="string" required>
             <br>
-            <input id="downloadButton" type="submit" value="search">
+            <input class="downloadButton" type="submit" value="search">
         </form>
     </div>
     @if(session('message'))
     <p>{{ session('message') }}</p>
 @endif
+<br>
 <div id="new">
 <form  action="{{route('newdownload')}}" method="post" >
 @csrf
-<b>If you want to get total data then press down button</b>
-<input id="downloadButton" type="submit" value="all data">
+<b>If you want to get total data then press on this button  -> </b>
+<input class="downloadButton" id="buttonnew" type="submit" value="all data">
     </form>
 </div>
 @if(session('message2'))
