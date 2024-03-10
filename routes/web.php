@@ -15,7 +15,7 @@ use PhpOffice\PhpSpreadsheet\Style\ConditionalFormatting\ConditionalFormatValueO
 |
 */
 
-Route::get('/', function () {
+Route::get('/form', function () {
     return view('form');
 })->name('form');
 Route::post('/formpost', [formController::class,'formhandler'])->name('formpost');
@@ -29,7 +29,7 @@ Route::get('layout1',function()
 {
 return view('layout.layout1');
 })->name('layout1');
-Route::get('first',function()
+Route::get('/',function()
 {
     return view('firstPage');
 })->name('first');
