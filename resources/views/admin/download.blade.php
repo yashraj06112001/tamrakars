@@ -7,26 +7,36 @@
     <title>Document</title>
     <style>
           .downloadButton{
-            position:absolute;
+           
             background-color: darkgreen;
             color:white;
-            height:40px;
-            width:100px;
-            margin-left:50px;
+            height:60px;
+            width:120px;
+            border-radius:50px;
+            font-size:20px;
             
         }
         .downloadButton:hover{
-            position:absolute;
+          
             background-color: lightgreen;
-            height:50px;
-            width:110px;
+            height:80px;
+            width:140px;
+            border-radius:50px;
             
         }
         input{
             margin:20px;
+            width:300px;
+            border-radius: 50px;
+            height: 49px;
+            font-size: 30px ;
         }
         label{
-           font-size: 30px;
+           font-size: 20px;
+           background-color: white;
+           border-radius: 30px;
+           color:#545103;
+           padding: 20px;;
         }
         #download{
             color:#545103;
@@ -34,13 +44,17 @@
             
         }
         #new{
-            margin-top:100px;
+            margin-bottom:100px;
+        
             
         }
-        #buttonnew{
+        p{
+
+        }
+        /* #buttonnew{
             position:absolute;
             top:430px;
-        }
+        } */
     </style>
    
 </head>
@@ -52,60 +66,28 @@
         <form id="pincodeForm" action="{{route('download')}}" method="post">
             @csrf
             <label for="pincode"><b>Pincode  </b></label>
-           
             <input id="pincode" name="pincode" type="string" required>
             <br>
             <input class="downloadButton" type="submit" value="search">
         </form>
     </div>
     @if(session('message'))
-    <p>{{ session('message') }}</p>
+    <p style="color:red;">{{ session('message') }}</p>
 @endif
+<br>
 <br>
 <div id="new">
 <form  action="{{route('newdownload')}}" method="post" >
 @csrf
-<b>If you want to get total data then press on this button  -> </b>
-<input class="downloadButton" id="buttonnew" type="submit" value="all data">
-    </form>
+<label style="font-size:20px;" ><b>If you want to get total data then press on this button </b>  </label>
+<br>
+<br>
+<input class="downloadButton" id="buttonnew" type="submit" value="All data">
+ </form>
 </div>
 @if(session('message2'))
     <p>{{ session('message2') }}</p>
 @endif
 @endsection
-<!-- <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        let pincodeForm = document.getElementById('pincodeForm');
-
-        pincodeForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            fetch(pincodeForm.getAttribute('action'), {
-                method: pincodeForm.getAttribute('method'),
-                body: new FormData(pincodeForm)
-            })
-            .then(response => {
-                if (response.ok) {
-                    return response.blob();
-                } else {
-                    throw new Error('No data found for this pincode.');
-                }
-            })
-            .then(blob => {
-                let url = window.URL.createObjectURL(blob);
-                let a = document.createElement('a');
-                a.href = url;
-                a.download = 'analysis.xlsx';
-                document.body.appendChild(a);
-                a.click();
-                window.URL.revokeObjectURL(url);
-            })
-            .catch(error => {
-                alert(error.message);
-            });
-        });
-    });
-</script> -->
-
 </body>
 </html>

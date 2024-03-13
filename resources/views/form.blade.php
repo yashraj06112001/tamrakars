@@ -7,21 +7,26 @@
     <title>Document</title>
     <style>
         input{
-            margin:10px;
+            margin:30px;
+            border-radius:20px;
+            width:300px;
+            height:30px;
+            font-size:19px;
         }
         #a{
             margin-left:100px;
             margin-top:50px;
-            border-style: groove;
-            border-radius: 10px;
-            width: 300px;
+            border-style: none;
+            border-radius: 50px;
             padding:10px;
-            border-width:20px;
-            
+            border-width:5px;
+            font-size: 20px;
         }
         #submit_button{
             background-color: darkgreen;
             color:white;
+            height:50px;
+            width:100px;
         }
         #submit_button:hover{
             background-color: lightgreen;

@@ -10,9 +10,9 @@
     <style>
          @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
         #heading{
-            border-color: pink;
-            padding:20px;
-            border-style:groove;
+            /* border-color: pink; */
+            padding:10px;
+            border-style:none;
             padding-left: 300px;    
             border-radius:20px;    
             grid-row-start:1;
@@ -20,11 +20,13 @@
             grid-column-start: 1;
             grid-column-end: 4;
             font-family: 'Playfair Display', serif; 
-            background-color: #f73444;
-            color:white;
-      
-
+            text-decoration: underline;
+            text-decoration-color: wheat;
+            text-decoration-thickness: 30px;
+            color:red;
+            font-size: 40px;
         }
+       
         #leftside{
             border-style:none;
             width:100px;
@@ -49,12 +51,12 @@
         }
         #main{
             display:grid;
-            grid-template-rows: repeat(1fr,3fr,1fr);
+            grid-template-rows: repeat(1fr,2fr,1fr);
             grid-template-columns: repeat(1fr,3fr,1fr);
             background-color: #f5ebd7;;
         }
         #footer{
-            border-color: black;
+            border-color: #736c72;
             padding:10px;
             border-style:groove;
             padding-left: 100px;    
@@ -65,14 +67,14 @@
             grid-column-end: 4;
             margin:20px;
             height:100px;
-            background-color: black;
+            background-color: #383738;
         }
         #content{
-            border-color: pink;
+            border-color: white;
             padding:20px;
-            border-style:groove;
+            border-style:none;
             padding-left: 100px;    
-            border-radius:20px;    
+            border-radius:80px;    
             grid-row-start:2;
             grid-row-end: 3;
             grid-column-start: 2;
@@ -85,7 +87,7 @@
 <body>
     <div id="main">
     <div id="heading">
-        <h1 style="margin:10px;"><b>TAMRAKARS</b></h1>
+        <h1 style="margin-left:20px;"><b>TAMRAKARS</b></h1>
     
     </div>
     <div id="leftside">
@@ -99,7 +101,10 @@
     </div>
     <div id="footer">
         <div>
-            <b style="color:white; font-size:larger;">Phone Number - 9399 400 801</b>
+            <b style="color:white; font-size:larger;">Phone Number - <u>9399 400 801</u></b>
+            <br>
+            <br>
+            <b style="color:white; font-size:larger;">email - admin@email.com</b>
         </div>
     </div>
     </div>

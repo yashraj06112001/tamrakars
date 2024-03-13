@@ -7,16 +7,20 @@
     <title>Document</title>
    <style>
     .add{
-        width: 150px;
-        height:60px;
+        width: 200px;
+        height:200px;
         margin:50px;
-       background-color:darkgreen;
+       background-color:lightgreen;
         color:white;
+        border-radius: 30px;
+        font-weight: bolder;
+        font-size: larger
+        
 
     }
     .add:hover{
-        width: 160px;
-        height:80px;
+        width: 220px;
+        height:220px;
         margin: 50px;
        background-color:lightgreen;
         color:white;
@@ -25,11 +29,19 @@
     }
     #hello{
         margin-left:100px;
+       text-decoration:underline;
+       text-decoration-style:solid;
+       text-decoration-color: black;
+       text-underline-offset: 10px;
     }
    #button2{
     position:absolute;
     margin-left:100px;
+    background-color:aqua;
+    color:black;
+    border-color: darkblue;
    }
+   
    </style>
 </head>
 <body>
@@ -40,8 +52,8 @@
         
             <form action="{{route('take')}}">
             @csrf
-            <button class="add" id="button1" type="submit" value="add" name="button">add your information</button>
-            <button class="add" id="button2" type="submit" value="data" name="button">All your data</button>
+            <button style="border-color:dark green;" class="add" id="button1" type="submit" value="add" name="button"><b>Add your information</b></button>
+            <button class="add" id="button2" type="submit" value="data" name="button"><b>All your data</b></button>
             </form>
  
     @endsection
